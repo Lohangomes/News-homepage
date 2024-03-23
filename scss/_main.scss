@@ -1,0 +1,138 @@
+.main {
+  padding-top: 4rem;
+  display: grid;
+  grid:
+    "img-principal img-principal aside"
+    "img-principal img-principal aside"
+    "next-evolution next-evolution aside"
+    "tecnologia tecnologia tecnologia";
+  gap: 5rem 2rem;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+
+  .img-principal {
+    grid-area: img-principal;
+
+    .lego-img {
+      height: 100%;
+    }
+  }
+
+  .next-evolution {
+    grid-area: next-evolution;
+
+    .Future-of-Web {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+
+      h1 {
+        font-weight: 800;
+        font-size: 4rem;
+        width: 30.0rem;
+      
+      }
+
+      p {
+        line-height: 150%;
+      }
+
+      .btn {
+        margin-top: 1.5rem;
+        background-color: $-Soft-red-med;
+        padding: 1.5rem 4.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        letter-spacing: 0.4rem;
+        font-weight: 700;
+        color: $Off-white;
+        border-radius: 0.5rem;
+        box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $Very-dark;
+        }
+      }
+    }
+  }
+
+  .aside {
+    grid-area: aside;
+    padding: 2rem;
+    background-color: $Very-dark;
+    color: $Grayish-blue;
+
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      color: $-Soft-orange-low;
+      font-weight: 700;
+    }
+
+    div {
+      &:nth-of-type(2) {
+        margin-block: 2rem;
+      }
+    }
+
+    .Hydrogen,
+    .The-Downsides {
+      border-bottom: 1px solid $Dark-grayish;
+    }
+
+    .repeat {
+      padding-bottom: 2.5rem;
+      line-height: 150%;
+
+      h3 {
+        transition: color 0.3s ease;
+        margin-bottom: 1.5rem;
+
+        a {
+          color: $Off-white;
+          transition: color 0.3s ease;
+          &:hover {
+            color: $-Soft-orange-low;
+          }
+        }
+      }
+    }
+  }
+
+  .tecnologia {
+    grid-area: tecnologia;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+
+    img {
+      max-width: 8rem;
+      border-radius: 0.5rem;
+    }
+
+    .repeat-two {
+      display: flex;
+      column-gap: 1rem;
+
+      span {
+        color: $Grayish-blue;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      h4 {
+        margin-block: 1rem;
+
+        a {
+          transition: color 0.3s ease;
+          &:hover {
+            color: $-Soft-orange-low;
+          }
+        }
+      }
+    }
+  }
+}
